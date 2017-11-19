@@ -1,0 +1,3 @@
+templateH: Hello, %s!
+templateG: Goodbye, %s!
+defaultName: Extranjero
