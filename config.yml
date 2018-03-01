@@ -1,0 +1,52 @@
+server:
+  type: simple
+  applicationContextPath: /validation/
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 5020
+
+logging:
+  level: INFO
+  loggers:
+    com.bankia: DEBUG
+
+kafka:
+  # comma separated list of brokers
+  brokers: localhost:29092
+  consumer:
+    parallelism: 1
+    topic: "validation"
+    failureTopic: "failed"
+    group.id: "validation"
+    enable.auto.commit: false
+      # long timeout during development / testing for debugger
+    session.timeout.ms: "12000"
+    auto.offset.reset: "earliest"
+
+kieServer:
+  username: "kieserver"
+  password: "kieserver1!"
+  url: "http://localhost:8180/kie-server/services/rest/server/containers/instances/"
+  # container version (rules version) can change based on document pipeline
+  container: "document-rules_1.0.21"
+
+solr:
+  url: http://localhost:8983/solr/
+  core: cognitive
+
+hbase:
+  connection:
+    hbase.zookeeper.quorum: "c-4123,c-4067,c-4069"
+    hbase.zookeeper.property.clientPort: "63501"
+    hbase.client.retries.number: 2
+    hbase.rpc.timeout: 5000
+  kerberos:
+    login:
+      principal: "SV01445@GRUPO.CM.ES"
+      keytab: "SV01445.keytab"
+    connection:
+      hadoop.security.authentication: kerberos
+      hbase.security.authentication: kerberos
+      hbase.master.kerberos.principal: principal (replace with whatever principal is)
+      hbase.regionserver.kerberos.principal: principal (replace with whatever principal is)
