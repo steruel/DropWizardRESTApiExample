@@ -1,0 +1,232 @@
+{
+	"idTrabajo": "113624",
+	"callbackUrl": "http://127.0.0.1....",
+	"__v": 0,
+	"errorDescription": null,
+	"dyda": {
+		"docs": {
+			"cabeceraServicioNegocioRespuesta": {
+				"entornoOperativo": "PU",
+				"versionServicioNegocio": "12.0",
+				"nombreServicioNegocio": "ObtenerDocumentoExpedienteDocumentalSNG",
+				"idUnicoServicioNegocio": "7301006413704134385   552016-12-1512.18.0952100001"
+			},
+			"parametrosSalida": {
+				"codTipoDocumento": "TD-0001",
+				"descAgrupacion": "Documento sin agrupación",
+				"indFirmantesAutomaticos": "true",
+				"firmantesDocumento": [
+					{
+						"codEstadoFirmaDocumento": "FR",
+						"codExpedienteIntervinienteRelacionado": " ",
+						"codCanalFirmaDocumento": "0010",
+						"momentoFirmaDocumento": "2017-08-01-09.12.55.014000",
+						"indFirmaRequerida": "false",
+						"nomFirmante": "SANDRA CRUZ ARAGON",
+						"codExpedienteInterviniente": "000712414",
+						"codTipoDocumentoAcreditativo": "1",
+						"idDocumentoAcreditativo": "000033164K",
+						"codTipoFirma": "FS",
+						"tipoFirmante": "EX"
+					}
+				],
+				"descSubtipoDocumento": "-",
+				"numOrdenDocumento": "6",
+				"nomTipoDocumento": "Condiciones Particulares CP",
+				"indControlImpresion": "false",
+				"codEstadoDocumento": "ED",
+				"indMasFicheros": "false",
+				"indMultiArchivo": "false",
+				"indValidacionCSO": "false",
+				"indObligatoriedad": "true",
+				"codSoporte": "PA",
+				"accionesInstancias": [
+					{
+						"codAccion": "PR",
+						"indPrecondiciones": "false"
+					},
+					{
+						"codAccion": "AT",
+						"indPrecondiciones": "false"
+					}
+				],
+				"clavePaginacionOut": "0",
+				"descTipoDocumento": "Condiciones Particulares CP",
+				"idAgrupacion": " ",
+				"codExpedienteInterviniente": "000712414",
+				"idPlantilla": "001662",
+				"indPostacciones": "false",
+				"descDocumento": "-",
+				"atributosInstanciaVacia": [],
+				"indDocumentoDefinidoExpediente": "true",
+				"indDigitalizacionCTD": "true",
+				"codOriginalCopia": "OR",
+				"indTratamientoBackOffice": "false",
+				"estadoInstanciaDocumento": "ED",
+				"idSubtipoDocumento": "SD-0053",
+				"codTipoOrigenSubtipoDocumento": "IE",
+				"indCondicionDisponibilidad": "false",
+				"indArchivo": "true",
+				"indDocumentoVisible": "true",
+				"ficheros": [
+					{
+						"usuarioAccion": "Oficina",
+						"localizadorFichero": "IPLUS_7301006413704134385___552017-08-0109.13.0443978218/0001.PDF",
+						"atributosNombre": [],
+						"momentoEstado": "2017-08-01-09.13.03.702000",
+						"nombreFichero": "Condiciones Particulares CP",
+						"estadoFichero": "ED",
+						"idDocGestorDocOut": "UJB82JNEUQBLHL7UA5SNT6KA9RTHOPDABLSV4S0K",
+						"indObservaciones": "false",
+						"acciones": [
+							{
+								"acciones": "PR"
+							},
+							{
+								"acciones": "AT"
+							}
+						]
+					}
+				],
+				"numSubOrdenDocumento": "0",
+				"indRequiereFirma": "true",
+				"numeroFicherosCompletar": "1"
+			}
+		},
+		"task": {
+			"cabeceraServicioNegocioRespuesta": {
+				"entornoOperativo": "PU",
+				"versionServicioNegocio": "3.0",
+				"nombreServicioNegocio": "ObtenerTareaDocumentalSNG",
+				"idUnicoServicioNegocio": "7301006413704134385   552016-12-1512.18.0952100001"
+			},
+			"parametrosSalida": {
+				"usuarioIncorporaDocumento": " ",
+				"codAcciones": [],
+				"usuarioSolicitante": "A116643",
+				"claves": [
+					{
+						"valorIplus": "10600",
+						"idClaveIplus": "1"
+					},
+					{
+						"valorIplus": "00017786012359742",
+						"idClaveIplus": "2"
+					}
+				],
+				"nomTipoDocumento": "Condiciones Particulares CP",
+				"centroAsignado": " ",
+				"fechaIncorporacionDocumento": " ",
+				"observacionesTarea": " ",
+				"idInstanciaUnicaProceso": "PH000001170800224036",
+				"detalleObservacionesDocumento": " ",
+				"indObligatorio": "false",
+				"codFase": " ",
+				"idInstanciaDocumento": "SD-0053",
+				"descripcionEstadoDocumento": "Enviar Documento",
+				"descripcionTipoDocumento": "Condiciones Particulares CP",
+				"codOficina": "8469",
+				"codMotivoRechazo": " ",
+				"codTipoTarea": "CD",
+				"codDocumentoInterviniente": "000712414",
+				"tipoExpedienteIplus": "PRODUCTOP",
+				"idDocumentoGestorDocumental": " ",
+				"codDocumentoTitular": "000712414",
+				"indFirma": "false",
+				"indOriginal": "false",
+				"codEstadoTarea": "ED",
+				"nomTitularPrincipal": "SANDRA CRUZ ARAGON",
+				"fechaAperturaTarea": "2017-08-01-09.13.03.605000",
+				"indDocumentoExpedienteInterviniente": "false",
+				"fechaCierreTarea": "2117-08-01-09.13.03.605000",
+				"codSubproceso": "RealizarDocumentacionYFirma",
+				"numExpedientes": "1",
+				"idLote": " ",
+				"codTipoTrabajo": "DI",
+				"nomProducto": "10600-00017786012359742",
+				"descripcionTarea": "CTD",
+				"indArchivo": "false",
+				"nomInterviniente": "SANDRA CRUZ ARAGON",
+				"numVersionDocumento": "1",
+				"usuarioAsignado": "IPLUS",
+				"instanciasDocumento": [
+					{
+						"idContrato": "00017786012359742",
+						"expedienteDocumental": "PH000001170800224036",
+						"idInstanciaDocumento": "2672108",
+						"nomSerieDocumental": "Contratación Ahorro Vista"
+					}
+				]
+			}
+		}
+	},
+	"worker": 2,
+	"lastModificationDate": "2017-08-01T07:13:05.289Z",
+	"creationDate": "2017-08-01T07:13:04.099Z",
+	"status": "send to Teradata",
+	"tas": {
+		"descMotivoRechazo": "",
+		"idLote": "",
+		"iPlus": {
+			"claves": [
+				{
+					"valor": "10600                                           ",
+					"id": "1 "
+				},
+				{
+					"valor": "00017786012359742                               ",
+					"id": "2 "
+				}
+			],
+			"cantClaves": 2,
+			"idExpediente": "PRODUCTOP"
+		},
+		"idBaseDocumental": "IPCLIENTES",
+		"codMotivoRechazo": "",
+		"nombreProducto": "10600-00017786012359742",
+		"primerTitular": {
+			"idDocumento": "000033164K",
+			"nombreCliente": "SANDRA CRUZ ARAGON",
+			"numCliente": "000712414"
+		},
+		"interviniente": {
+			"idDocumento": "000033164K",
+			"nombreCliente": "SANDRA CRUZ ARAGON",
+			"numCliente": "000712414"
+		},
+		"indicadorExpInterv": "",
+		"observacionesDig": "",
+		"descripcionTrabajo": "CTD",
+		"subproceso": {
+			"nombre": "",
+			"fase": "RealizarDocumentacionYFirma"
+		},
+		"proceso": {
+			"codigo": "",
+			"id": "PH000001170800224036"
+		},
+		"descExpediemteDocumental": "",
+		"idExpedienteDocumental": "PH000001170800224036",
+		"idDocGestorDocumental": "",
+		"descTipoDocumento": "Condiciones Particulares CP",
+		"idFichero": "0001",
+		"idDocumentoDyda": "2672108",
+		"momentoActualizacion": "2017-08-01-09.13.03.621000",
+		"momentoExpurgo": "2117-08-01-09.13.03.605000",
+		"momentoVencimiento": "2017-09-01-09.13.03.605000",
+		"momentoRealizacion": "2117-08-01-09.13.03.605000",
+		"momentoCreacion": "2017-08-01-09.13.03.605000",
+		"centroCreacion": "00001778",
+		"centroResolucion": "0000000",
+		"nombreUsuarioCreacion": "USUARIO 25 EPI",
+		"usuarioCreacion": "A116643",
+		"nombreUsuarioResolucion": "",
+		"usuarioResolucion": "",
+		"estadoTrabajo": "ED",
+		"codVersionDoc": "000000001",
+		"tipoDocumento": "SD-0053",
+		"tipoTrabajo": "DI",
+		"motivoEvento": "SCES",
+		"idTrabajo": "0000000000000000000000000000000000113624"
+	}
+}
