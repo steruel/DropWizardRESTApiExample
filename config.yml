@@ -1,10 +1,10 @@
 server:
   type: simple
-  applicationContextPath: /validation/
+  applicationContextPath: /v1/cognitive/enhancement
   adminContextPath: /admin
   connector:
     type: http
-    port: 5020
+    port: 5010
 
 logging:
   level: INFO
@@ -12,41 +12,43 @@ logging:
     com.bankia: DEBUG
 
 kafka:
-  # comma separated list of brokers
-  brokers: localhost:29092
+  brokers: kafka:29092
+
+  producer:
+    topic: "classification"
+    failureTopic: "failed"
+    acks: "1"
+    client.id: "api"
+    batch.size: 1
+
   consumer:
     parallelism: 1
-    topic: "validation"
-    failureTopic: "failed"
-    group.id: "validation"
+    topic: "enhancement"
+    group.id: "enhancement"
     enable.auto.commit: false
-      # long timeout during development / testing for debugger
-    session.timeout.ms: "12000"
+    # long timeout during development / testing for debugger
+    session.timeout.ms: "300000"
+    request.timeout.ms: "310000"
     auto.offset.reset: "earliest"
 
-kieServer:
-  username: "kieserver"
-  password: "kieserver1!"
-  url: "http://localhost:8180/kie-server/services/rest/server/containers/instances/"
-  # container version (rules version) can change based on document pipeline
-  container: "document-rules_1.0.21"
-
-solr:
-  url: http://localhost:8983/solr/
-  core: cognitive
-
 hbase:
-  connection:
-    hbase.zookeeper.quorum: "c-4123,c-4067,c-4069"
-    hbase.zookeeper.property.clientPort: "63501"
+  namespace: "BG_COGNITIVE"
+
+  config:
+    hbase.zookeeper.quorum: "hbase"
+    hbase.zookeeper.property.clientPort: "2181"
     hbase.client.retries.number: 2
     hbase.rpc.timeout: 5000
-  kerberos:
-    login:
-      principal: "SV01445@GRUPO.CM.ES"
-      keytab: "SV01445.keytab"
-    connection:
-      hadoop.security.authentication: kerberos
-      hbase.security.authentication: kerberos
-      hbase.master.kerberos.principal: principal (replace with whatever principal is)
-      hbase.regionserver.kerberos.principal: principal (replace with whatever principal is)
+
+captiva:
+  username: "teradata"
+  password: "$teradata.1"
+  url: "http://vlibkd007:81/repos/ocr/"
+  #url: "http://requestbin.fullcontact.com/1m3v6qr1/"
+  urlCaptiva: "http://conit-pu.cm.es/bisa/rest/snendpoint/GenerarFicherosXMLDocumentoHerramientaCapturaSNG/1.0/"
+  #urlCaptiva: "http://requestbin.fullcontact.com/1m3v6qr1/snendpoint/GenerarFicherosXMLDocumentoHerramientaCapturaSNG/1.0/"
+
+  #kerberos:
+  #  principal:
+  #  keytab:
+  #  refreshIntervalHours:
